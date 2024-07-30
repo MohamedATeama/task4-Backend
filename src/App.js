@@ -16,9 +16,9 @@ const hbs = require("hbs")
 const partialsPath = path.join(__dirname, '../templates/partials')
 hbs.registerPartials(partialsPath)
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(publicDirectory, 'data.html'))
-// })
+app.get('/data', (req, res) => {
+    res.sendFile(path.join(publicDirectory, 'data.html'))
+})
 
 app.get('/', (req, res) => {
     res.render('index', {
